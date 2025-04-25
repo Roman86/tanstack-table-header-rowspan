@@ -28,7 +28,7 @@ It handles nested groups and columns automatically.
         }
         return (
           <th
-            className={clsx('border border-black/20 bg-gray-100 px-2')}
+            className={'border border-black/20 bg-gray-100 px-2'}
             colSpan={header.colSpan}
             rowSpan={rowSpan}
             style={{

@@ -71,7 +71,7 @@ export function TableTh({ children, header }: PropsWithChildren<{ header: Header
   return (
     <th
       data-test-rowspan={header.column.columnDef.meta?.testRowSpan}
-      className={clsx('border border-black/20 bg-gray-100 px-2')}
+      className={'border border-black/20 bg-gray-100 px-2'}
       colSpan={header.colSpan}
       rowSpan={rowSpan}
       style={{
