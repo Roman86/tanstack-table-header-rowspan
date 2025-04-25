@@ -1,0 +1,68 @@
+{
+  "name": "tanstack-table-header-rowspan",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "source": "src/index.ts",
+  "module": "dist/rowspan.esm.js",
+  "main": "dist/rowspan.cjs",
+  "types": "dist/index.d.ts",
+  "exports": {
+    "types": "./dist/index.d.ts",
+    "require": "./dist/rowspan.cjs",
+    "default": "./dist/rowspan.modern.mjs"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "microbundle --target web -f modern,esm,cjs",
+    "prepublishOnly": "npm run build && npm run test",
+    "dev": "microbundle --target web -f modern,esm,cjs -w",
+    "test": "npm run test/build && playwright test",
+    "test/build": "vite build e2e",
+    "test/serve": "vite e2e --port 8080",
+    "test/ui": "playwright test --ui"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Roman86/tanstack-table-header-rowspan.git"
+  },
+  "keywords": [
+    "tanstack",
+    "table",
+    "header",
+    "rowspan",
+    "groups",
+    "nesting",
+    "nested",
+    "columns"
+  ],
+  "author": "Roman Kozodoi",
+  "license": "MIT",
+  "devDependencies": {
+    "@eslint/js": "^9.8.0",
+    "@playwright/test": "^1.45.3",
+    "@tailwindcss/vite": "^4.1.4",
+    "@types/eslint__js": "^8.42.3",
+    "@types/node": "^22.1.0",
+    "@types/react": "^19.1.2",
+    "@typescript-eslint/eslint-plugin": "^6.21.0",
+    "@types/react-dom": "^19.1.2",
+    "@vitejs/plugin-react": "^4.4.1",
+    "clsx": "^2.1.1",
+    "eslint": "^8.57.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-config-standard-with-typescript": "^43.0.1",
+    "microbundle": "^0.15.1",
+    "prettier": "^3.3.3",
+    "prettier-plugin-multiline-arrays": "^3.0.6",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "tailwindcss": "^4.1.4",
+    "vite": "^6.3.3"
+  },
+  "peerDependencies": {
+    "@tanstack/react-table": "^8"
+  }
+}
