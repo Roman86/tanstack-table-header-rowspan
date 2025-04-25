@@ -1,7 +1,7 @@
 {
   "name": "tanstack-table-header-rowspan",
   "version": "1.0.1",
-  "description": "",
+  "description": "Rowspan for TanStack Table headers",
   "type": "module",
   "source": "src/index.ts",
   "module": "dist/rowspan.esm.js",
@@ -18,10 +18,9 @@
   "scripts": {
     "build": "microbundle --target web -f modern,esm,cjs",
     "prepublishOnly": "npm run build && npm run test",
-    "dev": "microbundle --target web -f modern,esm,cjs -w",
+    "dev": "vite e2e --port 8080",
     "test": "npm run test/build && playwright test",
     "test/build": "vite build e2e",
-    "test/serve": "vite e2e --port 8080",
     "test/ui": "playwright test --ui"
   },
   "repository": {
