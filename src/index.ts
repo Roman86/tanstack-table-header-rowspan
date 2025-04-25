@@ -42,9 +42,9 @@ export function flexTableHeaderRowSpan(header: Header<any, any>) {
     topBorderMightBeNeeded: header.column.depth === 0,
     styles: (cssRowHeight: CSSProperties['height']): CSSProperties => ({
       /** @ts-ignore */
-      '--row-span': rowSpan,
-      height: `calc(var(--row-span, 1) * ${cssRowHeight})`,
-      marginTop: `calc(-1 * (var(--row-span, 1) - 1) * ${cssRowHeight})`,
+      '--rowspan': rowSpan,
+      height: `calc(var(--rowspan, 1) * ${cssRowHeight})`,
+      marginTop: `calc(-1 * (var(--rowspan, 1) - 1) * ${cssRowHeight})`,
       visibility: header.isPlaceholder ? 'hidden' : undefined,
     }),
   };
@@ -57,9 +57,9 @@ export function flexTableFooterRowSpan(header: Header<any, any>) {
     bottomBorderMightBeNeeded: header.column.depth === 0,
     styles: (cssRowHeight: CSSProperties['height']): CSSProperties => ({
       /** @ts-ignore */
-      '--row-span': rowSpan,
-      height: `calc(var(--row-span, 1) * ${cssRowHeight})`,
-      marginBottom: `calc(-1*(var(--row-span, 1) - 1) * ${cssRowHeight})`,
+      '--rowspan': rowSpan,
+      height: `calc(var(--rowspan, 1) * ${cssRowHeight})`,
+      marginBottom: `calc(-1*(var(--rowspan, 1) - 1) * ${cssRowHeight})`,
       visibility: header.isPlaceholder ? 'hidden' : undefined,
     }),
   };

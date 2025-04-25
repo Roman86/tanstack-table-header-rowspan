@@ -14,13 +14,13 @@ test('rowspan', async ({ page }, testInfo) => {
       top?: number;
     }
   > = {
-    "[data-test-row-span='3']": {
+    "[data-test-rowspan='3']": {
       height: 99,
     },
-    "[data-test-row-span='2']": {
+    "[data-test-rowspan='2']": {
       height: 66,
     },
-    "[data-test-row-span='1']": {
+    "[data-test-rowspan='1']": {
       height: 33,
     },
   };

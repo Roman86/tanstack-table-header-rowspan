@@ -70,7 +70,7 @@ export function TableTh({ children, header }: PropsWithChildren<{ header: Header
   }
   return (
     <th
-      data-test-row-span={header.column.columnDef.meta?.testRowSpan}
+      data-test-rowspan={header.column.columnDef.meta?.testRowSpan}
       className={clsx('border border-black/20 bg-gray-100 px-2')}
       colSpan={header.colSpan}
       rowSpan={rowSpan}
@@ -95,7 +95,7 @@ export function TableTfootTh({
   }
   return (
     <th
-      data-test-row-span={header.column.columnDef.meta?.testRowSpan}
+      data-test-rowspan={header.column.columnDef.meta?.testRowSpan}
       colSpan={header.colSpan}
       rowSpan={rowSpan}
       className={'border border-black/20 bg-gray-100'}
@@ -109,7 +109,7 @@ export function FlexTh({ children, header }: PropsWithChildren<{ header: Header<
   const rowSpan = flexTableHeaderRowSpan(header);
   return (
     <th
-      data-test-row-span={header.column.columnDef.meta?.testRowSpan}
+      data-test-rowspan={header.column.columnDef.meta?.testRowSpan}
       className={clsx(
         'group-first/row:border-t border-b border-e first:border-s border-black/20 bg-gray-100 px-2',
         'flex items-center justify-center',
@@ -141,7 +141,7 @@ export function FlexTfootTh({ children, header }: PropsWithChildren<{ header: He
   const rowSpan = flexTableFooterRowSpan(header);
   return (
     <th
-      data-test-row-span={header.column.columnDef.meta?.testRowSpan}
+      data-test-rowspan={header.column.columnDef.meta?.testRowSpan}
       className={clsx(
         'border-t group-last/row:border-b border-e first:border-s border-black/20 bg-gray-100',
         'flex items-center justify-center',

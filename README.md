@@ -3,7 +3,7 @@
 Rowspan thing for headless React Table from Tanstack. See the discussion https://github.com/TanStack/table/discussions/5051.
 
 Works for both header and footer:
-<img src="demo.jpg" alt="demo" width="220"/>
+![demo](./demo.png)
 
 ### How
 
@@ -118,7 +118,7 @@ It handles nested groups and columns automatically.
         const rowSpan = flexTableFooterRowSpan(header);
         return (
           <th
-            data-test-row-span={header.column.columnDef.meta?.testRowSpan}
+            data-test-rowspan={header.column.columnDef.meta?.testRowSpan}
             className={clsx(
               'border-t group-last/row:border-b border-e first:border-s border-black/20 bg-gray-100',
               'flex items-center justify-center',
