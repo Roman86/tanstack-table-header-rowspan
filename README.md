@@ -12,6 +12,10 @@ to apply on your `<th>` element.
 
 It handles nested groups and columns automatically.
 
+### ❤️ Enjoying this package? Consider buying me a coffee as a token of appreciation!
+
+[<img src="src/bmc_qr.png" alt="Buy Me A Coffee" width="120" height="120">](https://www.buymeacoffee.com/romanjs)
+
 ### Usage with standard "display: table" approach for header
 
 ```tsx
