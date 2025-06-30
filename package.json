@@ -55,7 +55,7 @@
     "eslint-config-standard-with-typescript": "^43.0.1",
     "microbundle": "^0.15.1",
     "prettier": "^3.3.3",
-    "prettier-plugin-multiline-arrays": "^3.0.6",
+    "prettier-plugin-multiline-arrays": "^4.0.3",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "tailwindcss": "^4.1.4",
