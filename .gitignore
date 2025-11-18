@@ -31,7 +31,7 @@ yarn-error.log*
 .env*.local
 
 # cache
-*/dist/
+dist/
 /test-results/
 /playwright-report/
 /blob-report/
