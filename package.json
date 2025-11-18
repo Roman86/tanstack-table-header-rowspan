@@ -63,5 +63,8 @@
   },
   "peerDependencies": {
     "@tanstack/react-table": "^8"
+  },
+  "overrides": {
+    "js-yaml": "^4.1.1"
   }
 }
