@@ -1,5 +1,5 @@
 import type { Header } from '@tanstack/react-table';
-import { type CSSProperties } from 'react';
+import type { CSSProperties } from 'react';
 
 function deepestHeader<D, V>(header: Header<D, V>): Header<D, V> | null {
   let last = header;
@@ -16,7 +16,7 @@ function deepestHeader<D, V>(header: Header<D, V>): Header<D, V> | null {
   }
 }
 
-export function tableHeaderRowSpan(header: Header<any, any>): number | null {
+export function tableHeaderRowSpan<D, V>(header: Header<D, V>): number | null {
   const deepest = deepestHeader(header);
   const rowSpan = (deepest ? deepest.depth - header.depth : 0) + 1;
   const above = header.depth - header.column.depth;
@@ -25,7 +25,7 @@ export function tableHeaderRowSpan(header: Header<any, any>): number | null {
   }
   return rowSpan;
 }
-export function tableFooterRowSpan(header: Header<any, any>): number | null {
+export function tableFooterRowSpan<D, V>(header: Header<D, V>): number | null {
   const deepest = deepestHeader(header);
   const below = (deepest ? deepest.depth - header.depth : 0) + 1;
   const above = header.depth - header.column.depth;
@@ -35,13 +35,13 @@ export function tableFooterRowSpan(header: Header<any, any>): number | null {
   return above;
 }
 
-export function flexTableHeaderRowSpan(header: Header<any, any>) {
+export function flexTableHeaderRowSpan<D, V>(header: Header<D, V>) {
   const rowSpan = header.depth - header.column.depth;
   return {
     rowSpan,
     topBorderMightBeNeeded: header.column.depth === 0,
     styles: (cssRowHeight: CSSProperties['height']): CSSProperties => ({
-      /** @ts-ignore */
+      /** @ts-expect-error custom CSS viable */
       '--rowspan': rowSpan,
       height: `calc(var(--rowspan, 1) * ${cssRowHeight})`,
       marginTop: `calc(-1 * (var(--rowspan, 1) - 1) * ${cssRowHeight})`,
@@ -50,13 +50,13 @@ export function flexTableHeaderRowSpan(header: Header<any, any>) {
   };
 }
 
-export function flexTableFooterRowSpan(header: Header<any, any>) {
+export function flexTableFooterRowSpan<D, V>(header: Header<D, V>) {
   const rowSpan = header.depth - header.column.depth;
   return {
     rowSpan,
     bottomBorderMightBeNeeded: header.column.depth === 0,
     styles: (cssRowHeight: CSSProperties['height']): CSSProperties => ({
-      /** @ts-ignore */
+      /** @ts-expect-error custom CSS viable */
       '--rowspan': rowSpan,
       height: `calc(var(--rowspan, 1) * ${cssRowHeight})`,
       marginBottom: `calc(-1*(var(--rowspan, 1) - 1) * ${cssRowHeight})`,
