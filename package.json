@@ -1,6 +1,6 @@
 {
   "name": "tanstack-table-header-rowspan",
-  "version": "1.0.10",
+  "version": "1.0.11",
   "description": "Rowspan for TanStack Table headers",
   "type": "module",
   "main": "./dist/index.cjs",
