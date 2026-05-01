@@ -1,5 +1,9 @@
 ### What
 
+[![NPM Downloads](https://img.shields.io/npm/dm/tanstack-table-header-rowspan)](https://www.npmjs.com/package/tanstack-table-header-rowspan)
+[![Buy Me A Coffee](https://img.shields.io/badge/Buy%20Me%20A%20Coffee-ffdd00?logo=buy-me-a-coffee&logoColor=black)](https://www.buymeacoffee.com/romanjs)
+[![GitHub Sponsors](https://img.shields.io/badge/Sponsor-ea4aaa?logo=github-sponsors&logoColor=white)](https://github.com/sponsors/Roman86)
+
 Rowspan thing for headless React Table from Tanstack. See the discussion https://github.com/TanStack/table/discussions/5051.
 
 Works for both header and footer:
