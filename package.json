@@ -24,7 +24,8 @@
     "dev": "vite e2e --port 8080",
     "test": "npm run test/build && playwright test",
     "test/build": "vite build e2e",
-    "test/ui": "playwright test --ui"
+    "test/ui": "playwright test --ui",
+    "preversion": "npm run lint && npm test"
   },
   "repository": {
     "type": "git",
